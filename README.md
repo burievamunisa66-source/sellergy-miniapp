@@ -1,0 +1,1 @@
+# sellergy-miniapp
