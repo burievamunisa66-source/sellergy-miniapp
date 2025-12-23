@@ -18,32 +18,38 @@
       --stroke:rgba(255,255,255,.08);
       --radius:16px;
     }
+
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
       background: var(--bg);
       color: var(--text);
     }
+
     .wrap{
       max-width: 980px;
       margin:0 auto;
       padding:16px;
     }
+
     h1{
       font-size:18px;
       margin:0 0 6px 0;
     }
+
     .sub{
       margin:0 0 16px 0;
       color:var(--muted);
       font-size:13px;
       line-height:1.35;
     }
+
     .grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap:12px;
     }
+
     .card{
       position:relative;
       border:1px solid var(--stroke);
@@ -52,10 +58,20 @@
         linear-gradient(180deg, rgba(255,214,0,.06), transparent 55%),
         var(--card);
       padding:14px;
-      min-height:120px;
+      min-height:150px;
       cursor:pointer;
       user-select:none;
     }
+
+    .card img{
+      width:100%;
+      height:120px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:12px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.45);
+    }
+
     .tag{
       display:flex;
       align-items:center;
@@ -63,6 +79,7 @@
       font-weight:700;
       letter-spacing:.2px;
     }
+
     .dot{
       width:10px;
       height:10px;
@@ -70,12 +87,14 @@
       background: var(--accent);
       box-shadow: 0 0 0 6px rgba(255,214,0,.10);
     }
+
     .desc{
       margin-top:10px;
       color:var(--muted);
       font-size:13px;
       line-height:1.35;
     }
+
     .hint{
       margin-top:14px;
       padding:12px;
@@ -84,42 +103,52 @@
       color:var(--muted);
       font-size:12.5px;
     }
+
     @media (min-width: 720px){
       .grid{grid-template-columns: repeat(3, minmax(0, 1fr));}
-      .card{min-height:140px;}
+      .card{min-height:180px;}
+      .card img{height:140px;}
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <h1>Навигация Sellergy</h1>
     <p class="sub">Выберите раздел сообщества. Плитка откроет нужный чат.</p>
 
     <div class="grid">
+
       <div class="card" onclick="go('https://t.me/+Js5bu_-fkxw0ZTdi')">
+        <img src="IMG_5981.png" alt="Обучение">
         <div class="tag"><span class="dot"></span>Обучение</div>
         <div class="desc">Уроки, материалы, инструкции.</div>
       </div>
 
       <div class="card" onclick="go('https://t.me/+B7AYFAFZ3w84NDAy')">
+        <img src="96ED1F14-7DDE-49F2-9847-7935839BD7AD.jpeg" alt="Общение">
         <div class="tag"><span class="dot"></span>Общение</div>
         <div class="desc">Сообщество, обмен опытом, кейсы.</div>
       </div>
 
       <div class="card" onclick="go('https://t.me/+D1ibup5f_sJhNWEy')">
+        <img src="IMG_5982.png" alt="Вопросы и ответы">
         <div class="tag"><span class="dot"></span>Вопросы и ответы</div>
         <div class="desc">Задайте вопрос — получите ответ.</div>
       </div>
 
       <div class="card" onclick="go('https://t.me/+SAMebKGzddVmM2Iy')">
+        <img src="IMG_5983.png" alt="Служба заботы">
         <div class="tag"><span class="dot"></span>Служба заботы</div>
         <div class="desc">Поддержка, помощь, доступы.</div>
       </div>
 
       <div class="card" onclick="go('https://t.me/+gHUPFrew5GY1YzI6')">
+        <img src="IMG_5984.png" alt="Информация">
         <div class="tag"><span class="dot"></span>Информация</div>
         <div class="desc">Правила, навигация, обновления.</div>
       </div>
+
     </div>
 
     <div class="hint">
